@@ -5,20 +5,12 @@
 var moveZeroes = function(nums) {
 
     let first = 0;
-    let last = nums.length - 1;
 
-    while( first < last){
+    for(let i= 0 ; i <nums.length;i++){
+        if(nums[i] !==  0){
 
-        if(nums[first] === 0){
-           for (let i = first; i < last; i++) {
-                nums[i] = nums[i + 1];
-            }
-
-            nums[last] = 0;
-            last--;
-        }
-        else{
-            first++
+             [nums[first], nums[i]] = [nums[i], nums[first]];
+            first++;
         }
     }
      return nums;
