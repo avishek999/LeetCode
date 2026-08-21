@@ -3,9 +3,14 @@
  * @return {string}
  */
 var reverseWords = function(s) {
-    
+let reverse = ''
 
- const reverse = s.trim().split(/\s+/).reverse().join(' ')
+ let arr = s.split(/\s+/);
+ 
+    for(let i = arr.length-1; i>=0 ; i--){
+       reverse+=arr[i] + ' ';
+    }
 
-   return reverse;
+ return reverse.trim()
+
 };
